@@ -22,12 +22,43 @@ body {
     background-color: var(--white-background-color);
 }
 
+ul,
+p,
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1200px;
+    padding: 0 15px;
+}
+
+.container.header {
+    display: flex;
+    align-items: center;
+}
+
 .list {
     list-style: none;
 }
 
 .link {
     text-decoration: none;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    margin-right: 344px;
 }
 
 .btn {
@@ -40,6 +71,9 @@ body {
     letter-spacing: 0.03em;
     color: var(--black-color);
     background-color: var(--btn-background-color);
+    padding: 6px 22px;
+    border-radius: 4px;
+    border-style: none;
 }
 
 .btn:hover,
@@ -52,6 +86,10 @@ body {
     background-color: var(--btn-active-background-color);
 }
 
+.section {
+    padding: 94px 0;
+}
+
 .section-title {
     font-weight: 700;
     font-size: 36px;
@@ -59,6 +97,7 @@ body {
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--black-color);
+    margin-bottom: 50px;
 }
 
 .visually-hidden {
@@ -77,6 +116,12 @@ body {
 /*--HEADER--*/
 .header {
     background-color: inherit;
+    border-bottom: 1px solid #ececec;
+}
+
+.header-list {
+    display: flex;
+    gap: 50px;
 }
 
 .header-logo,
@@ -86,6 +131,16 @@ body {
     line-height: 1.19;
     letter-spacing: 0.03em;
     color: var(--blue-text-color);
+    display: block;
+}
+
+.header-logo.position {
+    padding: 24px 0 25px;
+    margin-right: 93px;
+}
+
+.footer-logo.position {
+    margin-bottom: 20px;
 }
 
 .studio-header {
@@ -102,6 +157,8 @@ body {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: inherit;
+    padding: 32px 0;
+    display: block;
 }
 
 .header-link.active-link {
@@ -119,6 +176,8 @@ body {
 /*--INDEX--*/
 .hero {
     background-color: var(--hero-background-color);
+    text-align: center;
+    padding: 200px 0;
 }
 
 .hero-title {
@@ -130,6 +189,8 @@ body {
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--white-text-color);
+    max-width: 696px;
+    margin: 0 auto;
 }
 
 .hero-btn {
@@ -141,12 +202,23 @@ body {
     cursor: pointer;
     color: var(--white-text-color);
     background-color: var(--blue-background-color);
+    border-radius: 4px;
+    border-style: none;
+    padding: 10px 32px;
+    margin-top: 30px;
 }
 
 .hero-btn:active,
 .hero-btn:hover,
 .hero-btn:focus {
     background-color: var(--btn-active-background-color);
+}
+
+.particulars-list,
+.works-list,
+.team-list {
+    display: flex;
+    gap: 30px;
 }
 
 .particulars-item-title {
@@ -156,6 +228,7 @@ body {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--black-color);
+    margin-bottom: 10px;
 }
 
 .particulars-item-text {
@@ -171,6 +244,7 @@ body {
 
 .team-list-item {
     background-color: var(--white-background-color);
+    border-radius: 0px 0px 4px 4px;
 }
 
 .team-item-title {
@@ -180,6 +254,7 @@ body {
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--black-color);
+    margin: 30px 0 10px;
 }
 
 .team-item-text {
@@ -188,11 +263,27 @@ body {
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--item-text-color);
+    padding-bottom: 30px;
 }
 
 /*-PORTFOLIO-*/
+.filter-list {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
 .project-item {
     background-color: var(--white-background-color);
+    flex-basis: calc((100% - 60px) / 3);
+    border: 1px solid #eeeeee;
 }
 
 .project-item > a {
@@ -205,6 +296,8 @@ body {
     line-height: 2;
     letter-spacing: 0.06em;
     color: var(--black-color);
+    margin: 20px 0 4px;
+    padding: 0 24px;
 }
 
 .project-item-text {
@@ -212,11 +305,17 @@ body {
     line-height: 1.87;
     letter-spacing: 0.03em;
     color: var(--item-text-color);
+    padding: 0 24px 20px 24px;
 }
 
 /*-FOOTER-*/
 .footer {
     background-color: var(--background-footer-color);
+    padding: 60px 0;
+}
+
+.footer-item:not(:last-child) {
+    margin-bottom: 9px;
 }
 
 .footer-link {
